@@ -1,0 +1,35 @@
+<title>Assignment-5 JS Sahil</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Montserrat:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href = "./assign5.css"/>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <h1 id = "heading">The Quiz App</h1>
+
+        <sction id="align">
+    <form id="container">
+    
+    </form>
+    <div id="pad">
+    <div id="marks-box">
+
+        <p> Score:</p>
+        <div id="side-box">
+     <div id="score">0</div>
+        <div>/5</div>
+        </div>
+    </div>
+</div>
+</sction>
+    <script src="./assign5.js"></script>
+</body>
+</html>
