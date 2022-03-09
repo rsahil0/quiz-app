@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Montserrat:ital,wght@0,400;0,500;1,300&family=Source+Sans+Pro:wght@200;300;400&display=swap');
+
+
+body{
+  background-color: #54c3ef; 
+}
+
+#heading{
+    font-family: 'Caveat Brush', cursive;
+    color: #fad744;
+    text-shadow: 1px 1px 2px black;
+    text-align: center;
+    font-size: 40px;
+}
+
+#container{
+    width: 550px;
+    height: auto;
+    background-color: #2b3252;
+    padding: 20px 20px 0px 25px;
+    border-radius: 5px;
+}
+
+h3 {
+    color: #fad744;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 2px;
+}
+
+label{
+    color: #fad744;
+    font-family: 'Source Sans Pro', sans-serif;
+    cursor: pointer;
+}
+
+.optionPad{
+    padding: 6px 0px;
+    list-style: none;
+}
+
+#marks-box{
+    background-color: white;
+    height: 180px;
+    width: 100px;
+}
+
+#pad{
+    padding-left: 15px;
+}
+
+.line{
+    border-bottom: 1px solid #fad744;
+    margin-top: 40px;
+}
+
+.btn{
+    background-color: #fad744;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: #2b3252;
+    border-radius: 8px;
+    border: 2px solid;
+}
+
+.div{
+    text-align: center;
+    padding-bottom: 18px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: #2b3252;
+    color: #fad744 ;   
+}
+
+#marks-box{
+    background-color: white;
+    width: 100px;
+    height: 140px;
+    border-radius: 5px;
+    padding-top: 26px;
+    padding-left: 18px;
+    position: sticky;
+    top: 0px;
+}
+
+#align{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    margin-left: 12%; 
+}
+
+#side-box{
+    display: flex;
+    font-size: 30px;
+    margin-top: 15px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
