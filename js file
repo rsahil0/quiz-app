@@ -1,0 +1,61 @@
+$(document).ready(function() {
+
+    var allData = [];
+
+    function Question(data) {
+        var section = $("<section>");
+        var question = $("<h3>",).html(data.question);
+        var line = $("<div>").addClass("line");
+        section.append(question);
+        
+
+        for(var i=0; i<data.options.length; i++) {
+            var list = $("<li>").addClass("optionPad")
+            var options = $("<label>").addClass("options")
+            var input = $("<input>").attr("type", "radio").attr("name", "a" + data.id).attr("value", (i+1)).attr("required", "true").attr("id", "a" + data.id + "-" + (i+1))
+            var label = $("<span>").html(data.options[i])
+           
+            
+            options.append(input, label,line);
+            section.append(options,list);
+        }
+
+        $("#container").append(section);
+    }
+
+    $.get("https://5d76bf96515d1a0014085cf9.mockapi.io/quiz", function(response) {
+        allData = response;
+
+        for(var i=0; i<response.length; i++) {
+            Question(response[i])
+        }
+
+        var div = $("<div>").addClass("div")
+        $("#container").append(div)
+     
+        div.append($("<button>").attr("type", "submit").addClass("btn").text("Submit"))
+    });
+
+    
+    $("#container").submit(function(e) {
+        e.preventDefault();
+
+        var result = {}; 
+        var rBtn = $(".options input");
+        for(var i=0; i<rBtn.length; i++) {
+            if(rBtn[i].checked) {
+                result[rBtn[i].name] = rBtn[i].value
+            }
+        }
+       
+        var score = 0;
+        for(var j=0; j<allData.length; j++) {
+            var key = "a" + allData[j].id;
+           
+            if(result[key] == allData[j].answer) { 
+                score++;  
+            }
+        }
+        $("#score").html(score);
+    })
+});
